@@ -1,0 +1,13 @@
+#bmu credential export
+export AWS_PROFILE=Okta-Support
+export AWS_REGION=us-west-2
+
+access_key=$(egrep aws_access_key_id /Users/apple/.aws/credentials | cut -d ' ' -f 3)
+secret_key=$(egrep aws_secret_access_key /Users/apple/.aws/credentials | cut -d ' ' -f 3)
+session_token=$(egrep aws_session_token /Users/apple/.aws/credentials | cut -d ' ' -f 3)
+security_token=$(egrep aws_security_token /Users/apple/.aws/credentials | cut -d ' ' -f 3)
+
+export aws_access_key_id=$access_key
+export aws_secret_access_key=$secret_key
+export aws_session_token=$session_token
+export aws_security_token=$security_token
